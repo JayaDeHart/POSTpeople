@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/JayaDeHart/GETpeople#readme",
   "dependencies": {
-    "dynamoose": "^2.8.1"
+    "aws-sdk": "^2.987.0",
+    "dynamoose": "^2.8.1",
+    "uuid": "^8.3.2"
   }
 }
