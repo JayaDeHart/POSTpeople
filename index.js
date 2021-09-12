@@ -14,6 +14,7 @@ exports.handler = async (event) => {
   const { name, age, nickName } = JSON.parse(event.body);
 
   try {
+    //
     let newPerson = await Person.create({
       id: uuidv4(),
       name,
