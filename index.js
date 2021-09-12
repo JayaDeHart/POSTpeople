@@ -15,7 +15,7 @@ exports.handler = async (event) => {
 
   try {
     let newPerson = await Person.create({
-      id: uuidv4(),
+      primarykey: uuidv4(),
       name,
       age,
       nickName,
