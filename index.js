@@ -2,7 +2,7 @@ const dynamoose = require('dynamoose');
 const { v4: uuidv4 } = require('uuid');
 
 const personSchema = new dynamoose.Schema({
-  id: Number,
+  id: String,
   name: String,
   age: Number,
   nickName: String,
@@ -11,11 +11,9 @@ const personSchema = new dynamoose.Schema({
 const Person = dynamoose.model('lab-18-people', personSchema);
 
 exports.handler = async (event) => {
-  console.log(event);
   const { name, age, nickName } = JSON.parse(event.body);
 
   try {
-    //
     let newPerson = await Person.create({
       id: uuidv4(),
       name,
