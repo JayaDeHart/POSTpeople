@@ -2,7 +2,7 @@ const dynamoose = require('dynamoose');
 const { v4: uuidv4 } = require('uuid');
 
 const personSchema = new dynamoose.Schema({
-  id: String,
+  primarykey: String,
   name: String,
   age: Number,
   nickName: String,
