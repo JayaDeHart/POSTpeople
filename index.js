@@ -11,6 +11,7 @@ const personSchema = new dynamoose.Schema({
 const Person = dynamoose.model('lab-18-people', personSchema);
 
 exports.handler = async (event) => {
+  console.log(event.body);
   const { name, age, nickName } = JSON.parse(event.body);
 
   try {
